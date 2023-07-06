@@ -22,22 +22,8 @@ function TodoList() {
     const handleDelete = async (id) => {
         console.log('delete data');
         deleteTodo(id,disaptch)
-    //     await axios.delete(`${apiDomain}/todo/${id}`,
-    //         { headers: { "Authorization": `${user.token}` } }
-    //     ).then((res) => {
-    //         alert(res.data.message)
-    //     }).catch(({ response }) => {
-    //         alert(response.response.data.error)
-    //     })
-    //     getTodos();
+
     }
-
-    // const handleToggle = (data) => {
-    //     setTempTodo(data)
-    //     setShowEditForm(!showEditForm)
-    // }
-
-
 
     return (
         <div className='todo_wrapper'>

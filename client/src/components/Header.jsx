@@ -12,12 +12,11 @@ function Header() {
     const username = useSelector((state)=>state.user?.user?.username)
   
     const navigate = useNavigate();
-// const usernam = true;
-// const email = 'samleader'
+
     const handleLogout = () => {
         console.log('logging out');
         logOutuser(dispatch);
-        // navigate("/");
+    
     };
     return (
         <div className="header" >

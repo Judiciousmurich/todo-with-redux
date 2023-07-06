@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Axios from "axios";
-import { Context } from "../context/userContext/Context";
 import { apiDomain } from "../utils/utils";
 import { loginUser } from '../redux/apiCall';
 import { useSelector,useDispatch } from 'react-redux';
@@ -27,17 +26,7 @@ const username = useSelector((state)=>state.user?.user?.username)
     const onSubmit = (data) => {
         console.log(data);
         loginUser(dispatch,data);
-        // {username ? navigate('/todos') : alert('please login again')}
-        // Axios.post(`${apiDomain}/auth/login`, data)
-        //     .then(({ data }) => {
-        //         if (data.token) {
-        //             dispatch({ type: "LOGIN_SUCCESS", payload: data })
-        //             navigate("/todos")
-        //         }
-        //     }).catch(({ response }) => {
-        //         dispatch({ type: "LOGIN_FAILURE" })
-        //         alert(response?.data.error)
-        //     });
+       
     };
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="Form" >

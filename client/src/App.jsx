@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 import { Context } from './context/userContext/Context';
 
 function App() {
-  // const { user } = useContext(Context);
+
   const  user = useSelector((state)=>state.user.user?.username);
   console.log(user)
   return (
